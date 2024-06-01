@@ -1,0 +1,25 @@
+{% extends "www/base.html" %}
+
+
+
+{% block title %}Zestawienie Typów{% endblock %}
+
+
+
+{% block content %}
+
+    <h2>Typy</h2>
+
+    {% for Typ in Typy %}
+
+    
+
+    <h5><a href="{% url 'detail_Typ' pk=Typ.pk %}">{{Typ.nazwa}}</a></h5>
+
+    
+
+    {% endfor %}
+
+
+
+{% endblock %}

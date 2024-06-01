@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modele</title>
+</head>
+<body>
+    <h2>{{ Model.nazwa }}</h2>
+    <hr>
+    {% for Model in Modele.Marki.all %}
+        <a href="{% url 'detail-Model' pk=Model.id %}"><p>{{ Model.nazwa }}</p></a>
+    {% endfor %}
+</body>
+</html>

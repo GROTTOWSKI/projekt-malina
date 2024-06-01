@@ -1,0 +1,25 @@
+{% extends "www/base.html" %}
+
+
+
+{% block title %}Zestawienie Osprzętów{% endblock %}
+
+
+
+{% block content %}
+
+    <h2>Osprzęty</h2>
+
+    {% for Osprzęt in Osprzety %}
+
+    
+
+    <h5><a href="{% url 'detail_Osprzęt' pk=Osprzęt.pk %}">{{Osprzęt.nazwa}}</a></h5>
+
+    
+
+    {% endfor %}
+
+
+
+{% endblock %}

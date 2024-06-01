@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marki</title>
+</head>
+<body>
+    <h2>{{ Marka.nazwa }}</h2>
+    <img width="50" src="{{ Marka.logo.url }}" alt="">
+    <hr>
+    {% for Model in Marka.Model.all %}
+    <a herf="{% url 'detail-Model' pk=Model.id %}"><p>{{Model.nazwa}}</p></a>
+    {% endfor %}
+</body>
+</html>

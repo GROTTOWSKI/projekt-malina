@@ -1,0 +1,25 @@
+{% extends "www/base.html" %}
+
+
+
+{% block title %}Zestawienie Marek{% endblock %}
+
+
+
+{% block content %}
+
+    <h2>Marki</h2>
+
+    {% for Marka in Marki %}
+
+    
+
+    <h5><a href="{% url 'detail_Marka' pk=Marka.pk %}">{{Marka.nazwa}}</a></h5>
+
+    
+
+    {% endfor %}
+
+
+
+{% endblock %}

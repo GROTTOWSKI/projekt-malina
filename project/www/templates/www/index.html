@@ -1,0 +1,75 @@
+{% extends "www/base.html" %}
+
+
+
+{% block title %}Zestawienie wydziałów, kierunków i studentów{% endblock %}
+
+
+
+{% block content %}
+<!------------------------------------------------------------------------------------>
+    <h2>Marki</h2>
+
+    {% for Marka in Marki %}
+
+    
+
+    <h5><a href="{% url 'detail_Marka' pk=Marka.pk %}">{{Marka.nazwa}}</a></h5>
+
+    
+
+    {% endfor %}
+
+    <hr>
+<!------------------------------------------------------------------------------------>
+    <h2>Typy</h2>
+
+    {% for Typ in Typy %}
+
+    
+
+    <h5><a href="{% url 'detail_Typ' pk=Typ.pk %}">{{Typ.nazwa}}</a></h5>
+
+    
+
+    {% endfor %}
+
+    <hr>
+<!------------------------------------------------------------------------------------>
+    <h2>Osprzęty</h2>
+
+    {% for Osprzęt in Osprzęty %}
+
+    
+
+    <h5><a href="{% url 'detail_Osprzęt' pk=Osprzęt.pk %}">{{Osprzęt.nazwa}}</a></h5>
+
+    
+
+    {% endfor %}
+
+    <hr>
+<!------------------------------------------------------------------------------------>
+    <h2>Modele</h2>
+
+    {% for Model in Modele %}
+
+    
+
+    <h5><a href="{% url 'detail_Model' pk=Model.pk %}">{{Model.nazwa}}</a></h5>
+
+    
+
+    {% endfor %}
+
+    <hr>
+<!------------------------------------------------------------------------------------>
+{% endblock %}
+
+
+
+{% block footer %}
+
+Footer
+
+{% endblock %}

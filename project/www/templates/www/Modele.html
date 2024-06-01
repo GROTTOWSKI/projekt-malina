@@ -1,0 +1,25 @@
+{% extends "www/base.html" %}
+
+
+
+{% block title %}Zestawienie Modeli{% endblock %}
+
+
+
+{% block content %}
+
+    <h2>Modele</h2>
+
+    {% for Model in Modele %}
+
+    
+
+    <h5><a href="{% url 'detail_Model' pk=Model.pk %}">{{Model.nazwa}}</a></h5>
+
+    
+
+    {% endfor %}
+
+
+
+{% endblock %}
